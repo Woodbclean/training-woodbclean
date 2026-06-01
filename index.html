@@ -6920,20 +6920,6 @@ function updateSidebarLockIcons(){
   }
 }
 
-function st(prefix,tab,btn){
-  document.querySelectorAll('#'+prefix+'-'+tab).forEach(function(){});
-  var panels=document.querySelectorAll('[id^="'+prefix+'-"]');
-  panels.forEach(function(p){if(p.classList.contains('sub-panel'))p.classList.remove('active');});
-  var target=document.getElementById(prefix+'-'+tab);
-  if(target)target.classList.add('active');
-  var btns=document.querySelectorAll('.tb');
-  if(btn){
-    var bar=btn.closest('.tab-bar');
-    if(bar)bar.querySelectorAll('.tb').forEach(function(b){b.classList.remove('active');});
-    btn.classList.add('active');
-  }
-}
-
 // ===== RECAP QUIZZES =====
 function openRecap(wk){
   var modal=document.getElementById('recap-'+wk+'-modal');
